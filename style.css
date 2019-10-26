@@ -1,17 +1,10 @@
-/* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+    box-sizing: border-box;
+}
 
-/*
- BARVY
- sede pozadi      #e5e5e5
- svetle fialova   #48418e
- tmave fialova    #25133d
-
- POUZITE PISMO
- Source Sans Pro - rezy pisma light 300, regular 400 a bold 700
- https://fonts.google.com/specimen/Roboto
-*/
+*, ::after, ::before {
+    box-sizing: inherit;
+}
 
 body {
     padding: 0;
@@ -24,10 +17,153 @@ body {
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
-    margin: 0 auto; /* pruh je na stránce vycentrovaný */
-    background: white;
+    width: 840px;
+    margin: 0 auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ----- zde začni psát vlastní CSS ----- */
+.hlavicka {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 40px;
+}
+
+.hlavicka li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 28px;
+    font-weight: 300;
+    font-size: 10pt;
+}
+
+ul {
+    align-self: center;
+}
+
+.hlavicka p {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 28px;
+    align-self: center;
+    font-size: 10pt;
+}
+
+.vizual {
+    display: flex;
+    height: 390px;
+    background-image: url(images/přechod.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+h1 {
+    font-size: 55pt;
+    font-weight: 400;
+    color: white;
+    margin: 0px;
+    flex-shrink: 2;
+}
+
+.vizual p {
+    font-size: 20pt;
+    font-weight: 300;
+    color: white;
+    width: 300px;
+    margin: 0px;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 28px;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+
+.vizual img {
+    height: 95%;
+    left: 20px;
+    bottom: -20px;
+    position: relative;
+}
+
+.slogan ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.slogan li {
+    list-style: none;
+    font-weight: 400;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 28px;
+}
+
+.download {
+    background-color: #48418e;
+}
+
+.ikony {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.ikony img {
+    width: 13%;
+    padding: 20px 28px 15px 28px;
+}
+
+h2 {
+    display: flex;
+    background-color: white;
+    font-size: 14pt;
+    color: #48418e;
+    margin: 0 0 0 30px;
+    width: calc (100% / 3);
+}
+
+.detaily {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.popis {
+    background-color: white;
+    display: flex;
+    height: 140px;
+}
+
+.popis p {
+    margin: 28px;
+    margin-bottom: 14px;
+    width: calc (100% / 3);
+    text-align: center;
+    font-size: 13px;
+}
+
+.patka {
+    display: flex;
+    background-color: #48418e;
+    height: 30px;
+    justify-content: space-around;
+}
+
+.patka p {
+    margin: 0px;
+    align-self: center;
+    font-size: 8pt;
+    color: white;
+    font-weight: 300;
+}
